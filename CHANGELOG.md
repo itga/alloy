@@ -34,6 +34,10 @@ Main (unreleased)
 - Fixed an issue where clustering peers resolution via hostname in `--cluster.join-addresses`
   resolves to duplicated IP addresses when using SRV records. (@thampiotr)
 
+### Other changes
+
+- Change the Docker base image for Linux containers to `ubuntu:noble`. (@ptodev)
+
 v1.3.0
 -----------------
 
