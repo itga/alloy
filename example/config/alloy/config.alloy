@@ -86,3 +86,7 @@ pyroscope.write "pyroscope" {
 		)
 	}
 }
+
+livedebugging {
+  enabled = true
+}

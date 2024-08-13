@@ -1,6 +1,6 @@
 services:
   mimir:
-    image: grafana/mimir:2.12.0
+    image: grafana/mimir:2.13.0
     restart: on-failure
     command:
       - -config.file=/etc/mimir-config/mimir.yaml
@@ -10,13 +10,13 @@ services:
       - "9009:9009"
 
   loki:
-    image: grafana/loki:3.0.0
+    image: grafana/loki:3.1.1
     restart: on-failure
     ports:
       - "3100:3100"
 
   tempo:
-    image: grafana/tempo:2.4.1
+    image: grafana/tempo:2.5.0
     restart: on-failure
     command:
       - "-storage.trace.backend=local"                  # tell tempo where to permanently put traces
@@ -29,7 +29,7 @@ services:
       - "4317:4317"
 
   pyroscope:
-    image: grafana/pyroscope:1.5.0
+    image: grafana/pyroscope:1.7.1
     restart: on-failure
     ports:
       - "4040:4040"
